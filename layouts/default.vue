@@ -9,7 +9,9 @@
           </div>
         </transition>
         <transition name="button">
-          <div v-if="!signedIn"><button @click="signIn">Sign In</button></div>
+          <div v-if="!signedIn">
+            <NuxtLink to="/login"><button>Sign In</button></NuxtLink>
+          </div>
         </transition>
       </div>
     </div>
@@ -35,6 +37,9 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
+a:focus {
+  outline: none;
+}
 .menu-container {
   width: 100%;
   display: flex;
@@ -47,6 +52,11 @@ export default Vue.extend({
 
   display: flex;
   justify-content: flex-end;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 .button-enter-active,

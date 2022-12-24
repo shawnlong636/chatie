@@ -4,6 +4,7 @@ $accent: #f96612;
 html {
   color: $primary;
   font-family: 'Open Sans', sans-serif;
+  margin: 25px;
 }
 
 button {
@@ -23,5 +24,11 @@ button {
     border-color: lighten($accent, 20%);
     background-color: lighten($accent, 20%);
     transition: 0.2s;
+  }
+  &:focus {
+    background-color: $accent;
+    color: white;
+    border-color: $accent;
+    outline: none;
   }
 }

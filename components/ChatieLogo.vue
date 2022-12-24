@@ -46,15 +46,17 @@
         </g>
       </g>
     </svg>
-    <h2>Chat<span id="accent">ie</span></h2>
+    <NuxtLink to="/">
+      <h2>Chat<span id="accent">ie</span></h2>
+    </NuxtLink>
   </div>
 </template>
 
 <style scoped lang="scss">
 .container {
   display: flex;
-  align-items: start;
-  justify-items: start;
+  align-items: flex-start;
+  justify-items: flex-start;
 
   color: black;
 
@@ -67,10 +69,48 @@
   h2 {
     padding: 0;
     margin: 0;
+    color: black;
   }
 
   #accent {
     color: $accent;
+  }
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $accent;
+    transform-origin: bottom;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom;
+  }
+
+  &:active::after {
+    background-color: darken($accent, 25%);
+  }
+
+  &:focus::after {
+    transform: scaleX(1);
+    transform-origin: bottom;
+    outline: none;
+  }
+  &:focus {
+    outline: none;
   }
 }
 </style>
