@@ -3,8 +3,8 @@
 
 .button-line {
   border: 2px solid $accent;
-  padding: 5px 25px;
-  border-radius: 20px;
+  padding: 10px 25px;
+  border-radius: 10px;
   transition: all 0.35s;
   background: white;
   color: $accent;
@@ -24,8 +24,8 @@
 
 .button-fill {
   border: 2px solid $accent;
-  padding: 5px 25px;
-  border-radius: 20px;
+  padding: 10px 25px;
+  border-radius: 10px;
   transition: all 0.35s;
   background: $accent;
   color: white;
@@ -44,7 +44,6 @@
 
 .card {
   border-radius: 10px;
-  // box-shadow: 0 0 20px rgba(0, 0, 0, 0.28);
   background-color: white;
   padding: 30px;
 }

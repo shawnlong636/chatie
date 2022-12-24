@@ -15,7 +15,7 @@
         <NuxtLink to="/signup"
           ><button type="button" class="button-line">Sign Up</button></NuxtLink
         >
-        <NuxtLink to="/"
+        <NuxtLink to="/inbox"
           ><button class="button-fill" type="button">Sign In</button></NuxtLink
         >
       </div>

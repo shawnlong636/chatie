@@ -15,7 +15,7 @@
         <input id="password" type="password" name="password" />
       </div>
       <div class="row-container">
-        <NuxtLink to="/login">
+        <NuxtLink to="/inbox">
           <button type="button" class="button-fill">Create account</button>
         </NuxtLink>
       </div>
@@ -76,10 +76,5 @@ button {
   margin: 10px 0;
   width: auto;
   justify-self: center;
-}
-.card {
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.28);
-  padding: 30px;
 }
 </style>

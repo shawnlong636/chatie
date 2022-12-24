@@ -23,3 +23,11 @@ input {
     border: 1px solid $accent;
   }
 }
+
+a {
+  color: $primary;
+
+  &:hover {
+    color: $accent;
+  }
+}

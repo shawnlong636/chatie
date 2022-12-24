@@ -1,6 +1,34 @@
 <template>
   <div class="container">
-    <h1>Welcome to Chatie</h1>
+    <div class="chat-container">
+      <div class="card">
+        <h1>👋 Welcome to Chatie!</h1>
+        <p>
+          We're excited to provide you with a fast, reliable, and secure way to
+          communicate with your friends and loved ones.
+        </p>
+      </div>
+      <div class="card">
+        <p>
+          Chatie is designed with simplicity in mind, making it easy for you to
+          send messages with just a few taps.
+        </p>
+      </div>
+      <div class="card">
+        <p>
+          Plus, with end-to-end encryption, you can be confident that your
+          conversations are private and secure. So why wait? Download Chatie now
+          and start chatting with your friends and loved ones today!
+        </p>
+      </div>
+      <div id="cta" class="card">
+        <NuxtLink to="/signup">
+          <p>
+            Get Started <font-awesome-icon :icon="['fas', 'arrow-right']" />
+          </p>
+        </NuxtLink>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,7 +47,39 @@ h1 {
 }
 
 .container {
+  grid-template: 1fr / 1fr;
+  justify-items: stretch;
+  padding-top: 10px;
+}
+
+.chat-container {
   display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: minmax(max-content, 600px);
   justify-content: center;
+  grid-row-gap: 20px;
+}
+
+.card {
+  width: max-content;
+  max-width: 350px;
+  padding: 5px 30px;
+
+  svg {
+    padding-left: 5px;
+  }
+}
+
+.card:nth-of-type(even) {
+  justify-self: end;
+  background-color: rgb(248, 222, 177);
+}
+
+#cta {
+  display: grid;
+  justify-items: center;
+  a {
+    padding-right: 10px;
+  }
 }
 </style>
