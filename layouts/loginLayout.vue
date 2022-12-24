@@ -1,9 +1,7 @@
 <template>
   <div class="container">
     <ChatieLogo class="chatie-logo" />
-    <div class="card">
-      <Nuxt />
-    </div>
+    <Nuxt />
   </div>
 </template>
 
@@ -11,11 +9,6 @@
 .container {
   display: grid;
   justify-content: center;
-}
-.card {
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.28);
-  padding: 30px;
 }
 
 .chatie-logo {

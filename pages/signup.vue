@@ -1,23 +1,23 @@
 <template>
   <div class="card">
     <form>
-      <h2 id="header">Sign in to your account</h2>
+      <h2 id="header">Create your account</h2>
       <div class="input-group">
         <label for="email">Email</label>
         <input id="email" type="text" name="email" />
       </div>
       <div class="input-group">
+        <label for="full-name">Full Name</label>
+        <input id="full-name" type="text" name="full-name" />
+      </div>
+      <div class="input-group">
         <label for="password">Password</label>
         <input id="password" type="password" name="password" />
       </div>
-
       <div class="row-container">
-        <NuxtLink to="/signup"
-          ><button type="button" class="button-line">Sign Up</button></NuxtLink
-        >
-        <NuxtLink to="/"
-          ><button class="button-fill" type="button">Sign In</button></NuxtLink
-        >
+        <NuxtLink to="/login">
+          <button type="button" class="button-fill">Create account</button>
+        </NuxtLink>
       </div>
     </form>
   </div>
@@ -33,9 +33,8 @@ export default Vue.extend({
 <style scoped lang="scss">
 form {
   display: grid;
-  grid-template: repeat(4, auto) / 1fr;
+  grid-template: repeat(6, auto) / 1fr;
   grid-row-gap: 20px;
-  justify-content: stretch;
 
   h2 {
     padding: 0;
@@ -61,9 +60,26 @@ form {
     margin: 0;
   }
 }
+input {
+  border: 2px solid lightslategray;
+  box-shadow: 0 0 1px gray;
+  border-radius: 5px;
+  height: 30px;
+  outline: none;
+
+  &:focus {
+    border: 2px solid $accent;
+  }
+}
 
 button {
   margin: 10px 0;
+  width: auto;
   justify-self: center;
+}
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.28);
+  padding: 30px;
 }
 </style>

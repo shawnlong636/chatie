@@ -7,7 +7,7 @@ html {
   margin: 25px;
 }
 
-button {
+.button-line {
   border: 2px solid $accent;
   padding: 5px 25px;
   border-radius: 20px;
@@ -20,15 +20,73 @@ button {
     background-color: $accent;
     color: white;
   }
+
   &:active {
     border-color: lighten($accent, 20%);
     background-color: lighten($accent, 20%);
     transition: 0.2s;
   }
-  &:focus {
-    background-color: $accent;
-    color: white;
-    border-color: $accent;
-    outline: none;
+}
+
+.button-fill {
+  border: 2px solid $accent;
+  padding: 5px 25px;
+  border-radius: 20px;
+  transition: all 0.35s;
+  background: $accent;
+  color: white;
+  margin: 0;
+
+  &:hover {
+    background-color: white;
+    color: $accent;
   }
+  &:active {
+    border-color: lighten($accent, 20%);
+    color: lighten($accent, 20%);
+    transition: 0.2s;
+  }
+}
+
+input {
+  font-family: 'Open Sans', sans-serif;
+  color: $primary;
+
+  border: 1px solid lightslategray;
+  box-shadow: 0 0 1px gray;
+  border-radius: 5px;
+  height: 30px;
+  outline: none;
+  padding-left: 10px;
+
+  &:focus {
+    border: 1px solid $accent;
+  }
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.28);
+  padding: 30px;
+  width: 300px;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
+}
+
+.layout-enter,
+.layout-leave-to {
+  opacity: 0;
 }

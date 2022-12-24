@@ -3,14 +3,14 @@
     <div class="menu-container">
       <ChatieLogo />
       <div class="nav-container">
-        <transition name="nav-slide" appear>
-          <div v-if="signedIn">
-            <p>Signed In!</p>
-          </div>
-        </transition>
+        <div v-if="signedIn">
+          <p>Signed In!</p>
+        </div>
         <transition name="button">
           <div v-if="!signedIn">
-            <NuxtLink to="/login"><button>Sign In</button></NuxtLink>
+            <NuxtLink to="/login"
+              ><button class="button-line">Sign In</button></NuxtLink
+            >
           </div>
         </transition>
       </div>
@@ -57,27 +57,5 @@ a:focus {
 p {
   padding: 0;
   margin: 0;
-}
-
-.button-enter-active,
-.button-leave-active {
-  transition: all 0.5s ease;
-}
-
-.button-enter-from,
-.button-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-.nav-slide-enter-active,
-.nav-slide-leave-active {
-  transition-property: opacity;
-  transition-delay: 0.5s;
-  transition-duration: 0.25s;
-}
-.nav-slide-enter,
-.nav-slide-leave-to {
-  opacity: 0;
 }
 </style>
