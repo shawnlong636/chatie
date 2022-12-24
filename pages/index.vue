@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Home Page</h1>
+  <div class="container">
+    <h1>Welcome to Chatie</h1>
   </div>
 </template>
 
@@ -16,5 +16,10 @@ export default Vue.extend({
 h1 {
   padding: 0;
   margin: 0;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
 }
 </style>

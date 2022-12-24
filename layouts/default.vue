@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="outer-container">
     <div class="menu-container">
       <ChatieLogo />
       <div class="nav-container">
@@ -8,9 +8,9 @@
         </div>
         <transition name="button">
           <div v-if="!signedIn">
-            <NuxtLink to="/login"
-              ><button class="button-line">Sign In</button></NuxtLink
-            >
+            <NuxtLink to="/login">
+              <button class="button-fill">Sign In</button>
+            </NuxtLink>
           </div>
         </transition>
       </div>
@@ -57,5 +57,11 @@ a:focus {
 p {
   padding: 0;
   margin: 0;
+}
+
+.outer-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: 1fr / 1fr;
 }
 </style>

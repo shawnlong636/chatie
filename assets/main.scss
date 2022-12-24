@@ -1,51 +1,11 @@
-$primary: #515151;
-$accent: #f96612;
+// This stylesheet contains styling for default elements
+@import 'colors.scss';
 
 html {
   color: $primary;
   font-family: 'Open Sans', sans-serif;
   margin: 25px;
-}
-
-.button-line {
-  border: 2px solid $accent;
-  padding: 5px 25px;
-  border-radius: 20px;
-  transition: all 0.35s;
-  background: white;
-  color: $accent;
-  margin: 0;
-
-  &:hover {
-    background-color: $accent;
-    color: white;
-  }
-
-  &:active {
-    border-color: lighten($accent, 20%);
-    background-color: lighten($accent, 20%);
-    transition: 0.2s;
-  }
-}
-
-.button-fill {
-  border: 2px solid $accent;
-  padding: 5px 25px;
-  border-radius: 20px;
-  transition: all 0.35s;
-  background: $accent;
-  color: white;
-  margin: 0;
-
-  &:hover {
-    background-color: white;
-    color: $accent;
-  }
-  &:active {
-    border-color: lighten($accent, 20%);
-    color: lighten($accent, 20%);
-    transition: 0.2s;
-  }
+  background-color: $light-accent;
 }
 
 input {
@@ -62,31 +22,4 @@ input {
   &:focus {
     border: 1px solid $accent;
   }
-}
-
-.card {
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.28);
-  padding: 30px;
-  width: 300px;
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.5s;
-}
-
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-}
-
-.layout-enter-active,
-.layout-leave-active {
-  transition: opacity 0.5s;
-}
-
-.layout-enter,
-.layout-leave-to {
-  opacity: 0;
 }
