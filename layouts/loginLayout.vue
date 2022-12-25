@@ -1,6 +1,6 @@
 <template>
   <v-app :style="{ background: $vuetify.theme.themes['light'].background }">
-    <div class="container">
+    <div class="outer-container">
       <ChatieLogo class="chatie-logo" />
       <Nuxt />
     </div>
@@ -8,7 +8,7 @@
 </template>
 
 <style lang="scss">
-.container {
+.outer-container {
   display: grid;
   justify-content: center;
 }

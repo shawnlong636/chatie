@@ -3,7 +3,7 @@
 
 html {
   font-family: 'Open Sans', sans-serif;
-  margin: 25px;
+  margin: 0;
   background-color: #fef1e2;
 }
 
@@ -28,5 +28,9 @@ a {
 
   &:hover {
     color: $accent;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
