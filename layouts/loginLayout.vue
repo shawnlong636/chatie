@@ -1,8 +1,10 @@
 <template>
-  <div class="container">
-    <ChatieLogo class="chatie-logo" />
-    <Nuxt />
-  </div>
+  <v-app :style="{ background: $vuetify.theme.themes['light'].background }">
+    <div class="container">
+      <ChatieLogo class="chatie-logo" />
+      <Nuxt />
+    </div>
+  </v-app>
 </template>
 
 <style lang="scss">

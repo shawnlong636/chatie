@@ -1,3 +1,5 @@
+import colors from 'vuetify/es5/util/colors'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -32,7 +34,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/main.scss'],
 
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/auth', '@nuxtjs/axios'],
 
   styleResources: {
     scss: ['./assets/*.scss'],
@@ -51,8 +53,27 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     '@nuxtjs/fontawesome',
+    '@nuxtjs/vuetify',
   ],
 
+  vuetify: {
+    customVariables: [],
+    theme: {
+      dark: false,
+      themes: {
+        light: {
+          primary: '#515151',
+          accent: '#f96612',
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3,
+          background: '#fef1e2',
+        },
+      },
+    },
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [],

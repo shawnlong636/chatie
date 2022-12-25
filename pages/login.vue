@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <form>
+    <v-form ref="login">
       <h2 id="header">Sign in to your account</h2>
       <div class="input-group">
         <label for="email">Email</label>
@@ -12,14 +12,12 @@
       </div>
 
       <div class="row-container">
-        <NuxtLink to="/signup"
-          ><button type="button" class="button-line">Sign Up</button></NuxtLink
+        <v-btn outlined color="accent" elevation="2" to="/signup"
+          >Sign Up</v-btn
         >
-        <NuxtLink to="/inbox"
-          ><button class="button-fill" type="button">Sign In</button></NuxtLink
-        >
+        <v-btn color="accent" elevation="2" to="/">Sign In</v-btn>
       </div>
-    </form>
+    </v-form>
   </div>
 </template>
 
@@ -27,6 +25,9 @@
 import Vue from 'vue'
 export default Vue.extend({
   layout: 'loginLayout',
+  methods: {
+    login() {},
+  },
 })
 </script>
 

@@ -1,22 +1,20 @@
 <template>
-  <div class="outer-container">
-    <div class="menu-container">
-      <ChatieLogo />
-      <div class="nav-container">
-        <div v-if="signedIn">
-          <p>Signed In!</p>
-        </div>
-        <transition name="button">
-          <div v-if="!signedIn">
-            <NuxtLink to="/login">
-              <button class="button-fill">Sign In</button>
-            </NuxtLink>
+  <v-app :style="{ background: $vuetify.theme.themes['light'].background }">
+    <div class="outer-container">
+      <div class="menu-container">
+        <ChatieLogo />
+        <div class="nav-container">
+          <div v-if="$auth.loggedIn">
+            <p>Signed In!</p>
           </div>
-        </transition>
+          <div v-else>
+            <v-btn color="accent" elevation="0" to="/login">Sign In</v-btn>
+          </div>
+        </div>
       </div>
+      <Nuxt />
     </div>
-    <Nuxt />
-  </div>
+  </v-app>
 </template>
 
 <script lang="ts">
