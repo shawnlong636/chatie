@@ -15,7 +15,12 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@nuxt/types", "@types/node"]
+    "types": [
+      "@nuxt/types",
+      "@types/node",
+      "@types/nuxtjs__auth",
+      "@nuxtjs/vuetify"
+    ]
   },
   "vueCompilerOptions": {
     "target": 2.7,

@@ -62,11 +62,17 @@ h1 {
 
 .card {
   width: max-content;
+  height: max-content;
   max-width: 350px;
-  padding: 5px 30px;
+  padding: 10px 15px 0 15px;
 
   svg {
     padding-left: 5px;
+  }
+
+  * > {
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -78,8 +84,10 @@ h1 {
 #cta {
   display: grid;
   justify-items: center;
-  a {
-    padding-right: 10px;
+
+  * > {
+    padding: 0;
+    margin: 0;
   }
 }
 </style>

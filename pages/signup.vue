@@ -15,9 +15,7 @@
         <input id="password" type="password" name="password" />
       </div>
       <div class="row-container">
-        <NuxtLink to="/inbox">
-          <button type="button" class="button-fill">Create account</button>
-        </NuxtLink>
+        <v-btn color="accent" to="/">Create account</v-btn>
       </div>
     </form>
   </div>
