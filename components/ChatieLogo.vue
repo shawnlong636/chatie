@@ -54,9 +54,12 @@
 
 <style scoped lang="scss">
 .container {
-  display: flex;
-  align-items: flex-start;
-  justify-items: flex-start;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  padding: 0;
+  margin: 0;
 
   color: black;
 

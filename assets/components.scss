@@ -1,49 +1,15 @@
 // This stylesheet contains custom reusable components
 @import 'colors.scss';
 
-.button-line {
-  border: 2px solid $accent;
-  padding: 10px 25px;
-  border-radius: 10px;
-  transition: all 0.35s;
-  background: white;
-  color: $accent;
-  margin: 0;
-
-  &:hover {
-    background-color: $accent;
-    color: white;
-  }
-
-  &:active {
-    border-color: lighten($accent, 20%);
-    background-color: lighten($accent, 20%);
-    transition: 0.2s;
-  }
-}
-
-.button-fill {
-  border: 2px solid $accent;
-  padding: 10px 25px;
-  border-radius: 10px;
-  transition: all 0.35s;
-  background: $accent;
-  color: white;
-  margin: 0;
-
-  &:hover {
-    background-color: white;
-    color: $accent;
-  }
-  &:active {
-    border-color: lighten($accent, 20%);
-    color: lighten($accent, 20%);
-    transition: 0.2s;
-  }
-}
-
 .card {
   border-radius: 10px;
   background-color: white;
   padding: 30px;
+}
+
+.outer-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: 1fr / 1fr;
+  padding: 15px;
 }

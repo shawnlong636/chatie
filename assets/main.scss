@@ -2,10 +2,9 @@
 @import 'colors.scss';
 
 html {
-  color: $primary;
   font-family: 'Open Sans', sans-serif;
-  margin: 25px;
-  background-color: $light-accent;
+  margin: 0;
+  background-color: #fef1e2;
 }
 
 input {
@@ -29,5 +28,9 @@ a {
 
   &:hover {
     color: $accent;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
